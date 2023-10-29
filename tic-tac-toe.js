@@ -89,6 +89,17 @@ document.addEventListener("DOMContentLoaded", () => {
   // Event listener for mouse enter and leave events
   squares.forEach((square) => {
     square.addEventListener("mouseover", () => {
+      if (square.textContent !== "") {
+        square.classList.add("hover");
+      }
+    });
+
+    square.addEventListener("mouseleave", () => {
+      if (square.textContent !== "") {
+        square.classList.remove("hover");
+      }
+    });
+    square.addEventListener("mouseover", () => {
       if (square.textContent === "") {
         square.classList.add("hover");
       }
